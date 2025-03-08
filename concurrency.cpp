@@ -71,17 +71,17 @@ int main() {
     thread t(&test, 100); // starts executing thread parallely
     t.join();
 
-	thread t1(increment);
+    thread t1(increment);
     thread t2(increment); 
 
-	t1.join(); // waits until t1 thread finishes execution
-	t2.join(); 
+    t1.join(); // waits until t1 thread finishes execution
+    t2.join(); 
 
-	thread th1(thread1); 
+    thread th1(thread1); 
     thread th2(thread2); 
 
-	th1.join(); 
-	th2.join(); 
+    th1.join(); 
+    th2.join(); 
 
     // No need to manually join, Thread automatically joins when `t` goes out of scope and it is available from C++20
     // jthread jt(increment);
